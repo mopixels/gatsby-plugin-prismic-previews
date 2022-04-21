@@ -59,7 +59,7 @@
 		"fp-ts": "^2.10.5",
 		"gatsby-node-helpers": "^1.2.1",
 		"react-shadow": "^19.0.2",
-		"tiny-hashes": "git@github.com:mopixels/tiny-hashes.git"
+		"tiny-hashes": "https://github.com/mopixels/tiny-hashes.git"
 	},
 	"devDependencies": {
 		"@angeloashmore/esbuild-register": "^0.0.1",
