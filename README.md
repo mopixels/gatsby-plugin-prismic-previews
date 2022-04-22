@@ -1,32 +1,30 @@
-<div align="center">
-  <br/>
-  <div>
-    <img width="200" height="200" src="media/gatsby-plus-prismic.svg" alt="Gatsby + Prismic" />
-  </div>
-</div>
+# gatsby-plugin-prismic-previews
 
-# Gatsby + Prismic
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
+[![Codecov][codecov-src]][codecov-href]
+[![Conventional Commits][conventional-commits-src]][conventional-commits-href]
+[![License][license-src]][license-href]
 
-Build best-in-class static websites using [Gatsby][gatsby] and [Prismic][prismic].
+Integrate live [Prismic Previews][prismic-previews] into a static [Gatsby][gatsby] site to enable editors a seamless content editing experience.
 
-**[Gatsby][gatsby] is an open-source frontend framework** for creating integrated, blazing fast websites and apps.
+- 🤝 Integrates tightly with the [Gatsby Prismic source plugin][gatsby-source-prismic]
+- 👁 Refreshes preview content automatically as changes are saved in Prismic
+- 🚅 Adds the [Prismic Toolbar][prismic-toolbar] with an in-app edit button and preview link sharing.
+- 🌩 No extra infrastructure or costs required (specifically, [Gatsby Cloud][gatsby-cloud] is not required)
 
-**[Prismic][prismic] is a content management system** that lets you choose your technology, framework, and language and then easily manage your content.
+## Install
 
-## Getting Started
-
-If you are new to Gatsby, you can start by going through [Gatsby's in-depth tutorial on creating a site](https://www.gatsbyjs.com/tutorial/).
-
-Or if you want to dive straight into some code and see an example site using Prismic, you can check out [Prismic's example blog repository](https://github.com/prismicio/gatsby-blog).
+```bash
+npm install gatsby-plugin-prismic-previews gatsby-source-prismic gatsby-plugin-image
+```
 
 ## Documentation
 
-For full documentation, see each plugin's package.
+To discover what's new on this package check out [the changelog][changelog]. For full documentation, visit the [official Prismic documentation][prismic-docs].
 
-- [**gatsby-source-prismic**](https://github.com/prismicio/gatsby/tree/main/packages/gatsby-source-prismic): Gatsby source plugin for building websites using Prismic as a data source
-- [**gatsby-plugin-prismic-previews**](https://github.com/prismicio/gatsby/tree/main/packages/gatsby-plugin-prismic-previews): Gatsby plugin for integrating client-side Prismic Previews
-
-## How to Contribute
+## Contributing
 
 Whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the Prismic developer community!
 
@@ -38,16 +36,37 @@ Whether you're helping us fix bugs, improve the docs, or spread the word, we'd l
 
 **Submitting code changes**: For small fixes, feel free to [open a PR][repo-pull-requests] with a description of your changes. For large changes, please first [open an issue][repo-feature-request] so we can discuss if and how the changes should be implemented.
 
-### A note on how this repository is organized
+## License
 
-This repository is a monorepo managed using Yarn workspaces. This means there are [multiple packages](https://github.com/prismicio/gatsby/tree/main/packages) managed in this codebase, even though we publish them to NPM as separate packages.
+```
+Copyright 2013-2021 Prismic <contact@prismic.io> (https://prismic.io)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
 
 <!-- Links -->
 
-[gatsby]: https://gatsbyjs.com/
-[prismic]: https://prismic.io/
-[new-issue]: https://github.com/prismicio/gatsby/issues/new
-[pull-requests]: https://github.com/prismicio/gatsby/pulls
+[prismic]: https://prismic.io
+[gatsby]: https://www.gatsbyjs.com/
+[prismic-previews]: https://prismic.io/docs/core-concepts/preview-setup
+[gatsby-source-prismic]: https://github.com/prismicio/gatsby/tree/main/packages/gatsby-source-prismic
+[prismic-toolbar]: https://prismic.io/docs/technologies/previews-and-the-prismic-toolbar-javascript
+[gatsby-cloud]: https://www.gatsbyjs.com/products/cloud/
+
+<!-- TODO: Replace link with a more useful one if available -->
+
+[prismic-docs]: https://prismic.io/docs/technologies/gatsby
+[changelog]: https://github.com/prismicio/gatsby/blob/main/packages/gatsby-plugin-prismic-previews/CHANGELOG.md
 
 <!-- TODO: Replace link with a more useful one if available -->
 
@@ -55,3 +74,18 @@ This repository is a monorepo managed using Yarn workspaces. This means there ar
 [repo-bug-report]: https://github.com/prismicio/gatsby/issues/new?assignees=&labels=bug&template=bug_report.md&title=
 [repo-feature-request]: https://github.com/prismicio/gatsby/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
 [repo-pull-requests]: https://github.com/prismicio/gatsby/pulls
+
+<!-- Badges -->
+
+[npm-version-src]: https://img.shields.io/npm/v/gatsby-plugin-prismic-previews/latest.svg
+[npm-version-href]: https://npmjs.com/package/gatsby-plugin-prismic-previews
+[npm-downloads-src]: https://img.shields.io/npm/dm/gatsby-plugin-prismic-previews.svg
+[npm-downloads-href]: https://npmjs.com/package/gatsby-plugin-prismic-previews
+[github-actions-ci-src]: https://github.com/prismicio/gatsby/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/prismicio/gatsby/actions?query=workflow%3Aci
+[codecov-src]: https://img.shields.io/codecov/c/github/prismicio/gatsby.svg
+[codecov-href]: https://codecov.io/gh/prismicio/gatsby
+[conventional-commits-src]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
+[conventional-commits-href]: https://conventionalcommits.org
+[license-src]: https://img.shields.io/npm/l/gatsby-plugin-prismic-previews.svg
+[license-href]: https://npmjs.com/package/gatsby-plugin-prismic-previews
