@@ -48,9 +48,7 @@ export const onPostBootstrap: NonNullable<
 
 	const serializedTypePaths = serializeTypePathNodes(typePathNodes);
 
-	const filename = `${
-		sprintf(TYPE_PATHS_BASENAME_TEMPLATE, pluginOptions.repositoryName),
-	}.json`;
+	const filename = `${sprintf(TYPE_PATHS_BASENAME_TEMPLATE, pluginOptions.repositoryName)}.json`;
 	const publicPath = path.join("public", "static", filename);
 
 	await pluginOptions.writeTypePathsToFilesystem({

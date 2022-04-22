@@ -1,7 +1,6 @@
 import * as prismicT from "@prismicio/types";
-import md5 from "tiny-hashes/md5";
 
-const createId = () => md5(Math.random().toString());
+const createId = () => Math.random().toString();
 
 export const createPrismicAPIDocument = <
 	TData extends prismicT.PrismicDocument["data"] = Record<string, never>,
