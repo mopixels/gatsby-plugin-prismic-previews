@@ -7,6 +7,9 @@ const fs = require('fs');
 const gatsbyPrismic = require('gatsby-source-prismic');
 const path = require('path');
 const gatsbyNodeHelpers = require('gatsby-node-helpers');
+const md5 = require('tiny-hashes/md5');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 function _interopNamespace(e) {
 	if (e && e.__esModule) return e;
@@ -29,6 +32,7 @@ function _interopNamespace(e) {
 const prismic__namespace = /*#__PURE__*/_interopNamespace(prismic);
 const gatsbyPrismic__namespace = /*#__PURE__*/_interopNamespace(gatsbyPrismic);
 const path__namespace = /*#__PURE__*/_interopNamespace(path);
+const md5__default = /*#__PURE__*/_interopDefaultLegacy(md5);
 
 const DEFAULT_TOOLBAR = "new";
 const DEFAULT_PROMPT_FOR_ACCESS_TOKEN = true;
@@ -87,7 +91,7 @@ const onPostBootstrap = async (gatsbyContext, pluginOptions) => {
     gatsbyContext.reporter.panic(sprintf(REPORTER_TEMPLATE, pluginOptions.repositoryName, TYPE_PATHS_MISSING_NODE_MSG));
   }
   const serializedTypePaths = serializeTypePathNodes(typePathNodes);
-  const filename = `${sprintf(TYPE_PATHS_BASENAME_TEMPLATE, pluginOptions.repositoryName)}.json`;
+  const filename = `${md5__default["default"](sprintf(TYPE_PATHS_BASENAME_TEMPLATE, pluginOptions.repositoryName))}.json`;
   const publicPath = path__namespace.join("public", "static", filename);
   await pluginOptions.writeTypePathsToFilesystem({
     publicPath,

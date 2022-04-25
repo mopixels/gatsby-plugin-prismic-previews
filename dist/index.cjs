@@ -9,6 +9,7 @@ const prismic = require('@prismicio/client');
 const E = require('fp-ts/Either');
 const O = require('fp-ts/Option');
 const gatsby = require('gatsby');
+const md5 = require('tiny-hashes/md5');
 const root = require('react-shadow');
 const clsx = require('clsx');
 const dialog = require('@reach/dialog');
@@ -41,6 +42,7 @@ const prismic__namespace = /*#__PURE__*/_interopNamespace(prismic);
 const E__namespace = /*#__PURE__*/_interopNamespace(E);
 const O__namespace = /*#__PURE__*/_interopNamespace(O);
 const gatsby__namespace = /*#__PURE__*/_interopNamespace(gatsby);
+const md5__default = /*#__PURE__*/_interopDefaultLegacy(md5);
 const root__default = /*#__PURE__*/_interopDefaultLegacy(root);
 const clsx__default = /*#__PURE__*/_interopDefaultLegacy(clsx);
 const cc__namespace = /*#__PURE__*/_interopNamespace(cc);
@@ -376,7 +378,7 @@ const extractPreviewRefRepositoryName = (previewRef) => {
 };
 
 const buildTypePathsStoreFilename = (repositoryName) => {
-  return `${sprintf(TYPE_PATHS_BASENAME_TEMPLATE, repositoryName)}.json`;
+  return `${md5__default["default"](sprintf(TYPE_PATHS_BASENAME_TEMPLATE, repositoryName))}.json`;
 };
 
 const fetchTypePaths = async (config) => {

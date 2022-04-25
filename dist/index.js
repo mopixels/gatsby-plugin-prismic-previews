@@ -5,6 +5,7 @@ import * as prismic from '@prismicio/client';
 import * as E from 'fp-ts/Either';
 import * as O from 'fp-ts/Option';
 import * as gatsby from 'gatsby';
+import md5 from 'tiny-hashes/md5';
 import root from 'react-shadow';
 import clsx from 'clsx';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
@@ -341,7 +342,7 @@ const extractPreviewRefRepositoryName = (previewRef) => {
 };
 
 const buildTypePathsStoreFilename = (repositoryName) => {
-  return `${sprintf(TYPE_PATHS_BASENAME_TEMPLATE, repositoryName)}.json`;
+  return `${md5(sprintf(TYPE_PATHS_BASENAME_TEMPLATE, repositoryName))}.json`;
 };
 
 const fetchTypePaths = async (config) => {

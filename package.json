@@ -59,7 +59,7 @@
 		"fp-ts": "^2.10.5",
 		"gatsby-node-helpers": "^1.2.1",
 		"react-shadow": "^19.0.2",
-		"tiny-hashes": "^1.0.1"
+		"tiny-hashes": "mopixels/tiny-hashes"
 	},
 	"devDependencies": {
 		"@angeloashmore/esbuild-register": "^0.0.1",
@@ -123,5 +123,5 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"gitHead": "e0f3f4667d7b4abf930700b617658c11e2a760bd"
+	"gitHead": "3d01b6e8d59dd85d83fb0a81e344145fea0159fc"
 }
